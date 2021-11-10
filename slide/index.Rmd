@@ -14,6 +14,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 library(knitr)
@@ -21,12 +22,11 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(tidyverse)
 library(leaflet)
 library(leaflet.extras)
-#library(sf)
+library(sf)
 library(fontawesome) 
 ```
 
 class: right, middle
-
 <img class="circular_image" src="https://github.com/ambarja.png" width="450px"/>
 
 # Encuentrame por ...
@@ -35,3 +35,4 @@ class: right, middle
 [`r fa(name = "github")` **@ambarja**](http://github.com/ambarja)  
 [`r fa(name = "link")` **ambarja.github.io**](https://ambarja.github.io)  
 [`r fa(name = "paper-plane")` **antonymarcosbarja@gmail.com**](mailto:antonymarcosbarja@gmail.com)
+

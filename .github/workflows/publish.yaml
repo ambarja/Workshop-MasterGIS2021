@@ -24,9 +24,18 @@ jobs:
         id: install-r
 
       - uses: r-lib/actions/setup-pandoc@v1
+      
+      - name: "[Stage] [Linux] Install required system libs"
+        if: runner.os == 'Linux'
+        run: sudo apt install libcurl4-openssl-dev libgit2-dev
+      
+      - name: "[Custom block] [Linux] Install spatial libraries"
+        if: runner.os == 'Linux'
+        run: sudo apt-get install libgdal-dev libproj-dev libgeos-dev libudunits2-dev
 
       - name: Install dependencies
         run: |
+          install.packages("sf")
           install.packages("xaringan")
           install.packages("xaringanthemer")
           install.packages("devtools")
@@ -36,8 +45,7 @@ jobs:
           devtools::install_github("rstudio/fontawesome")
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
-
-
+        
       - name: Build xaringan presentation
         run: |
           Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "index.html", output_dir = "public")'
@@ -46,8 +54,7 @@ jobs:
         run: |
           cp slide/meliodas.css public/meliodas.css
           cp slide/default.css public/default.css
-
-       
+          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
