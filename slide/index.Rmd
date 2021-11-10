@@ -6,7 +6,7 @@ author: "Antony Barja<br/><i class='fab fa-github'></i> https://ambarja.github.i
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["default", "libs/remark.css"]
+    css: ["default", "./css/meolidas.css"]
     lib_dir: libs
     nature:
       ratio: 16:9
