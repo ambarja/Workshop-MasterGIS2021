@@ -1,0 +1,37 @@
+---
+title: 'Webmapping en R <img src="img/globe.gif" width="120px">'
+subtitle: "Cambiando paradigmas en la visualización de datos espaciales<hr>"
+type: "contributed"
+author: "Antony Barja<br/><i class='fab fa-github'></i> https://ambarja.github.io<br><i class='fab fa-twitter'></i> https://twitter.com/antony_barja"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "libs/remark.css"]
+    lib_dir: libs
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(tidyverse)
+library(leaflet)
+library(leaflet.extras)
+library(sf)
+library(fontawesome) 
+```
+
+class: right, middle
+
+<img class="circular_image" src="https://github.com/ambarja.png" width="450px"/>
+
+# Encuentrame por ...
+
+[`r fa(name = "twitter")` **@antony_barja**](http://twitter.com/antony_barja)  
+[`r fa(name = "github")` **@ambarja**](http://github.com/ambarja)  
+[`r fa(name = "link")` **ambarja.github.io**](https://ambarja.github.io)  
+[`r fa(name = "paper-plane")` **antonymarcosbarja@gmail.com**](mailto:antonymarcosbarja@gmail.com)
