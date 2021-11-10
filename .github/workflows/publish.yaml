@@ -30,25 +30,14 @@ jobs:
           install.packages("xaringan")
           install.packages("xaringanthemer")
           install.packages("devtools")
-          install.packages("tidyverse")
-          install.packages("sf")
-          install.packages("leaflet")
-          install.packages("leaflet.extras")
-          install.packages("leaflet.extras2")
-          install.packages("leafpop")
-          install.packages("leafsync")
-          install.packages("leaflet.minicharts")
-          devtools::install_github("rstudio/fontawesome")
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
-      
-      - name: "[Custom block] [Linux] Install spatial libraries"
-        if: runner.os == 'Linux'
-        run: sudo apt-get install libgdal-dev libproj-dev libgeos-dev libudunits2-dev
-        
+
+
       - name: Build xaringan presentation
         run: |
-          Rscript -e 'rmarkdown::render("index.Rmd", output_file = "index.html", output_dir = "public")'          
+          Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "index.html", output_dir = "public")'
+          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
