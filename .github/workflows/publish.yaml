@@ -41,6 +41,10 @@ jobs:
           devtools::install_github("rstudio/fontawesome")
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
+      
+      - name: "[Custom block] [Linux] Install spatial libraries"
+        if: runner.os == 'Linux'
+        run: sudo apt-get install libgdal-dev libproj-dev libgeos-dev libudunits2-dev
         
       - name: Build xaringan presentation
         run: |
