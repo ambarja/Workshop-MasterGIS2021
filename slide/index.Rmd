@@ -21,7 +21,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(tidyverse)
 library(leaflet)
 library(leaflet.extras)
-library(sf)
+#library(sf)
 library(fontawesome) 
 ```
 
