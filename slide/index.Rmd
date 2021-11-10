@@ -1,5 +1,5 @@
 ---
-title: 'Webmapping en R <img src="img/globe.gif" width="120px">'
+title: 'Webmapping en R <img src="https://raw.githubusercontent.com/ambarja/Workshop-MasterGIS2021/main/slide/img/globe.gif" width="120px">'
 subtitle: "Cambiando paradigmas en la visualización de datos espaciales<hr>"
 type: "contributed"
 author: "Antony Barja<br/><i class='fab fa-github'></i> https://ambarja.github.io<br><i class='fab fa-twitter'></i> https://twitter.com/antony_barja"
