@@ -30,6 +30,10 @@ jobs:
           install.packages("xaringan")
           install.packages("xaringanthemer")
           install.packages("devtools")
+          install.packages("tidyverse")
+          install.packages("leaflet")
+          install.packages("leaflet.extras")
+          devtools::install_github("rstudio/fontawesome")
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
 
