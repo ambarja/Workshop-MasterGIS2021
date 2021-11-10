@@ -46,6 +46,7 @@ jobs:
         run: |
           cp slide/meliodas.css public/meliodas.css
           cp slide/default.css public/default.css
+          cp sile/img/* public slide/img/* 
 
        
       - name: Deploy
