@@ -42,7 +42,7 @@ jobs:
         run: |
           Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "index.html", output_dir = "public")'
        
-        - name: Copy css
+      - name: Copy css
         run: |
           cp slide/meliodas.css public/meliodas.css
           cp slide/default.css public/default.css
