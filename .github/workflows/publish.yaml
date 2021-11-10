@@ -42,12 +42,9 @@ jobs:
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
         
-      - name: Build index page
-        run: |
-          Rscript -e 'rmarkdown::render("README.md", output_format = "html_document", output_file = "index.html", output_dir = "public")'
       - name: Build xaringan presentation
         run: |
-          Rscript -e 'rmarkdown::render("./slide/index.Rmd", output_file = "index.html", output_dir = "public")'          
+          Rscript -e 'rmarkdown::render("index.Rmd", output_file = "index.html", output_dir = "public")'          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
