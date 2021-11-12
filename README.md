@@ -7,7 +7,7 @@
 </p>
 </table>
 
-### En este taller aprenderás los conceptos básicos que involocra a un **GIS developer** como asímismo las técnologías que están dentro del frontend y backend para el desarrollo de mapas webs.Finalmente se tocará aspectos generales de leaflet y derivados para el desarrollo de aplicaciones webs usando el lenguaje de programación R.
+#### En este taller aprenderás los conceptos básicos que involocra a un **GIS developer** como asímismo las técnologías que están dentro del frontend y backend para el desarrollo de mapas webs.Finalmente se tocará aspectos generales de leaflet y derivados para el desarrollo de aplicaciones webs usando el lenguaje de programación R.
 
 
 ## 🔴 **Objetivos** 
