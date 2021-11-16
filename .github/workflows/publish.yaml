@@ -46,14 +46,17 @@ jobs:
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
         
+      - name: create new directory
+        run: |
+          mkdir output
       - name: Build xaringan presentation
         run: |
-          Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "index.html", output_dir = "public")'
+          Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "output/index.html")'
        
       - name: Copy css + HTMLwidgets
         run: |
-          mkdir public/output
-          cp slide/output/* public/output/* 
+          ls 
+          cp slide/output/* public/output 
           cp slide/meliodas.css public/meliodas.css
           cp slide/default.css public/default.css
           
