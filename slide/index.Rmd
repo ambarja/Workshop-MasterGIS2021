@@ -25,6 +25,7 @@ library(leaflet)
 library(leaflet.extras)
 library(sf)
 library(fontawesome) 
+library(htmlwidgets)
 ```
 
 class: center, middle,inverse
@@ -139,10 +140,10 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 # Resultado
 
 ```{r echo=FALSE,fig.height=7,fig.width=14.5,fig.align='center'}
-leaflet() %>% 
+m = leaflet() %>% 
   addTiles() %>% 
   addPopups(lat = -12.0556056,lng = -77.086536,popup = "<h3>Mi primer mapa web 🤓</h3>")
-
+m
 ```
 
 ---

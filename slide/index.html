@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Webmapping en R </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Antony Barja  https://ambarja.github.io  https://twitter.com/antony_barja" />
+    <meta name="date" content="2021-11-16" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/proj4/proj4.min.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <link rel="stylesheet" href="default.css" type="text/css" />
+    <link rel="stylesheet" href="meliodas.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Webmapping en R <img src="https://raw.githubusercontent.com/ambarja/Workshop-MasterGIS2021/main/slide/img/globe.gif" width="120px">
+## Cambiando paradigmas en la visualización de datos espaciales
+<hr>
+### Antony Barja<br/><i class='fab fa-github'></i> <a href="https://ambarja.github.io" class="uri">https://ambarja.github.io</a><br><i class='fab fa-twitter'></i> <a href="https://twitter.com/antony_barja" class="uri">https://twitter.com/antony_barja</a>
+### 2021-11-16
+
+---
+
+
+
+
+class: center, middle,inverse
+background-image: url(./img/mybg.svg)
+&lt;h1&gt;&lt;b&gt;Aspectos generales&lt;/b&gt;&lt;/h1&gt;
+---
+# 1. Acontecimientos históricos
+
+&lt;img src="./img/p1_1.png" align="center" width="100%"&gt;
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+&lt;img src="./img/p1_2.png" align="center" width="100%"&gt;
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# Primer mapa web
+
+&lt;img src="https://user-images.githubusercontent.com/23284899/136648139-eea89087-1bba-4825-a571-6489af1c5938.png" width="75%" align="center"&gt;
+
+######[*Figura02: Primer mapa web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+&lt;img src="./img/p1_3.png" align="center" width="100%"&gt;
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+&lt;img src="./img/p1_4.png" align="center" width="100%"&gt;
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+&lt;img src="./img/p1_5.png" align="center" width="100%"&gt;
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 2. Tecnologías de desarrollo web 
+
+&lt;img src="./img/p2.svg" align="center" width="100%"&gt;
+
+---
+# 3.Tecnologías web orientado al aspecto espacial
+
+&lt;img src="./img/p3.svg" align="center" width="90%"&gt;
+
+---
+clase: center
+background-image: url(./img/Leaflet_logo.svg)
+background-size:100%
+background-color: #000000
+
+---
+# 3.Tecnologías a usar:
+# * HTML 
+```
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi primer mapa web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+```
+---
+# 3.Tecnologías a usar:
+# * CSS
+```
+&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /&gt;
+```
+
+```
+#mapid{
+    width: 100%;
+    height: 100%;
+   }
+```
+# * JS
+
+```
+&lt;script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"&gt;&lt;/script&gt;
+```
+
+```
+var map = L.map('map',{center: [35.10418, -106.62987],zoom: 10});
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+```
+
+---
+# Entonces 
+&lt;h2 align="center"&gt;&lt;b&gt;Webmap = HTML + CSS + JS&lt;/b&gt;&lt;/h3&gt;
+&lt;br/&gt;
+&lt;img src="./img/p4.svg" align="center" width="100%"&gt;
+
+---
+# Resultado
+
+<div id="htmlwidget-032043ca384b11dd9bd5" style="width:1044px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-032043ca384b11dd9bd5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[-12.0556056,-77.086536,"<h3>Mi primer mapa web 🤓<\/h3>",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]}],"limits":{"lat":[-12.0556056,-12.0556056],"lng":[-77.086536,-77.086536]}},"evals":[],"jsHooks":[]}</script>
+
+---
+class: center, middle,inverse
+background-image: url(./img/mybg.svg)
+&lt;h1&gt;&lt;b&gt;Leaflet en R &lt;/b&gt;&lt;/h1&gt;
+---
+# 4.R 
+
+
+---
+# 5.Rstudio
+
+---
+# 6.Leaflet en R
+
+- Instalación 
+
+---
+# 7.Componentes generales
+
+
+--- 
+# 8.Componentes avanzandos
+
+
+---
+# PARTE PRÁCTICA
+---
+# 9.Datos abiertos
+---
+# 10.Cheatsheet 
+---
+# 11.Código reproducible
+
+---
+# 12.Resultado
+
+---
+background-image: url(./img/mybg.svg)
+class: center, middle,inverse
+# ¡ GRACIAS ^^!
+### Estos slides fueron creados en: [xaringan](https://github.com/yihui/xaringan) con [RMarkdown](https://rmarkdown.rstudio.com/)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
