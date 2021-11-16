@@ -14,7 +14,7 @@ body {
 }
 h1, h2, h3 {
   font-family: 'PT Sans Narrow', sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 25px;
 }
 .remark-slide-content h1 { font-size: 42px; }
 .remark-slide-content h2 { font-size: 40px; }
@@ -23,7 +23,7 @@ h1, h2, h3 {
   background-position: center;
   background-repeat: no-repeat;
   display: table-cell;
-  font-size: 38px;
+  font-size: 28px;
   padding: 0em 3.2em;
 }
 .footnote {
@@ -130,7 +130,7 @@ code {
   padding: 15px;
 }
 .inverse {
-  background: #2b3135
+  background: #000000ff
   color: rgb(223, 73, 66);
 }
 .inverse h1, .inverse h2 {
@@ -288,7 +288,7 @@ blockquote:before {
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
-  /* background-color: rgb(43, 43, 43); */
+  background-color: white; */
   /* commented for demo
   float: left;
   margin-left: 125px;
@@ -301,4 +301,21 @@ blockquote:before {
 }
 .circular_image img{
   width:100%;
+}
+
+/*Footer*/
+
+div.my-footer {
+  background-color: #000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 20px;
+  width: 100%;
+}
+
+element {
+  width: 1030px;
+  height: 550px;
+  position: relative;
 }

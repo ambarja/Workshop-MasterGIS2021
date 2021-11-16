@@ -11,7 +11,7 @@ a, a > code {
 .remark-code-line-highlighted     { background-color: #ffff88; }
 
 .inverse {
-  background-color: #272822;
+  background-color: #000000ff;
   color: #d6d6d6;
   text-shadow: 0 0 20px #333;
 }

@@ -26,13 +26,162 @@ library(sf)
 library(fontawesome) 
 ```
 
-class: right, middle
-<img class="circular_image" src="https://github.com/ambarja.png" width="450px"/>
+class: center, middle,inverse
+background-image: url(./img/mybg.svg)
+<h1><b>Aspectos generales</b></h1>
+---
+# 1. Acontecimientos históricos
 
-# Encuentrame por ...
+<img src="./img/p1_1.png" align="center" width="100%">
 
-[`r fa(name = "twitter")` **@antony_barja**](http://twitter.com/antony_barja)  
-[`r fa(name = "github")` **@ambarja**](http://github.com/ambarja)  
-[`r fa(name = "link")` **ambarja.github.io**](https://ambarja.github.io)  
-[`r fa(name = "paper-plane")` **antonymarcosbarja@gmail.com**](mailto:antonymarcosbarja@gmail.com)
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
 
+---
+# 1. Acontecimientos históricos
+
+<img src="./img/p1_2.png" align="center" width="100%">
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# Primer mapa web
+
+<img src="https://user-images.githubusercontent.com/23284899/136648139-eea89087-1bba-4825-a571-6489af1c5938.png" width="75%" align="center">
+
+######[*Figura02: Primer mapa web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+<img src="./img/p1_3.png" align="center" width="100%">
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+<img src="./img/p1_4.png" align="center" width="100%">
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 1. Acontecimientos históricos
+
+<img src="./img/p1_5.png" align="center" width="100%">
+
+######[*Figura01: Cronología de algunos acontecimientos significativos de la cartografía web*](https://www.mdpi.com/2220-9964/6/10/317/htm)
+
+---
+# 2. Tecnologías de desarrollo web 
+
+<img src="./img/p2.svg" align="center" width="100%">
+
+---
+# 3.Tecnologías web orientado al aspecto espacial
+
+<img src="./img/p3.svg" align="center" width="90%">
+
+---
+clase: center
+background-image: url(./img/Leaflet_logo.svg)
+background-size:100%
+background-color: #000000
+
+---
+# 3.Tecnologías a usar:
+# * HTML 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer mapa web</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+---
+# 3.Tecnologías a usar:
+# * CSS
+```
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+```
+
+```
+#mapid{
+    width: 100%;
+    height: 100%;
+   }
+```
+# * JS
+
+```
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+```
+
+```
+var map = L.map('map',{center: [35.10418, -106.62987],zoom: 10});
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+```
+
+---
+# Entonces 
+<h2 align="center"><b>Webmap = HTML + CSS + JS</b></h3>
+<br/>
+<img src="./img/p4.svg" align="center" width="100%">
+
+---
+# Resultado
+
+```{r echo=FALSE,fig.height=7,fig.width=14.5,fig.align='center'}
+leaflet() %>% 
+  addTiles() %>% 
+  addPopups(lat = -12.0556056,lng = -77.086536,popup = "<h3>Mi primer mapa web 🤓</h3>")
+
+```
+
+---
+class: center, middle,inverse
+background-image: url(./img/mybg.svg)
+<h1><b>Leaflet en R </b></h1>
+---
+# 4.R 
+
+
+---
+# 5.Rstudio
+
+---
+# 6.Leaflet en R
+
+- Instalación 
+
+---
+# 7.Componentes generales
+
+
+--- 
+# 8.Componentes avanzandos
+
+
+---
+# PARTE PRÁCTICA
+---
+# 9.Datos abiertos
+---
+# 10.Cheatsheet 
+---
+# 11.Código reproducible
+
+---
+# 12.Resultado
+
+---
+background-image: url(./img/mybg.svg)
+class: center, middle,inverse
+# ¡ GRACIAS ^^!
+### Estos slides fueron creados en: [xaringan](https://github.com/yihui/xaringan) con [RMarkdown](https://rmarkdown.rstudio.com/)
