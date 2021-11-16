@@ -17,6 +17,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+options(htmltools.preserve.raw = FALSE)
 library(knitr)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 library(tidyverse)
