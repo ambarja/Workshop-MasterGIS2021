@@ -50,8 +50,9 @@ jobs:
         run: |
           Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "index.html", output_dir = "public")'
        
-      - name: Copy css
+      - name: Copy css + HTMLwidgets
         run: |
+          cp /home/runner/work/Workshop-MasterGIS2021/Workshop-MasterGIS2021/slide/libs/htmlwidgets /home/runner/work/Workshop-MasterGIS2021/Workshop-MasterGIS2021/public/
           cp slide/meliodas.css public/meliodas.css
           cp slide/default.css public/default.css
           
