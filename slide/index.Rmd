@@ -7,7 +7,7 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: ["default.css", "meliodas.css"]
-    lib_dir: libs
+    lib_dir: 'output'
     nature:
       ratio: 16:9
       highlightStyle: github
@@ -19,7 +19,7 @@ output:
 options(htmltools.dir.version = FALSE)
 options(htmltools.preserve.raw = FALSE)
 library(knitr)
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+knitr::opts_chunk$set('output/',warning = FALSE, message = FALSE)
 library(tidyverse)
 library(leaflet)
 library(leaflet.extras)
@@ -140,10 +140,10 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 # Resultado
 
 ```{r echo=FALSE,fig.height=7,fig.width=14.5,fig.align='center'}
-m = leaflet() %>% 
+leaflet() %>% 
   addTiles() %>% 
   addPopups(lat = -12.0556056,lng = -77.086536,popup = "<h3>Mi primer mapa web 🤓</h3>")
-m
+
 ```
 
 ---
