@@ -46,9 +46,6 @@ jobs:
           devtools::install_github("gadenbuie/xaringanExtra")
         shell: Rscript {0}
         
-      - name: create new directory
-        run: |
-          mkdir output
       - name: Build xaringan presentation
         run: |
           Rscript -e 'rmarkdown::render("slide/index.Rmd", output_file = "output/index.html")'
