@@ -44,9 +44,7 @@ a, a > code {
 .pull-right + * {
   clear: both;
 }
-img, video, iframe {
-  max-width: 100%;
-}
+
 blockquote {
   border-left: solid 5px lightgray;
   padding-left: 1em;
@@ -69,4 +67,8 @@ th, td { padding: 5px; }
     top: 0 !important;
     left: 0 !important;
   }
+}
+
+element {
+  margin-bottom: -34px;
 }

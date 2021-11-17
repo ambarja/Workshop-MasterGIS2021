@@ -7,7 +7,7 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: ["default.css", "meliodas.css"]
-    lib_dir: 'output'
+    lib_dir: ouput
     nature:
       ratio: 16:9
       highlightStyle: github
@@ -143,47 +143,60 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 leaflet() %>% 
   addTiles() %>% 
   addPopups(lat = -12.0556056,lng = -77.086536,popup = "<h3>Mi primer mapa web 🤓</h3>")
-
 ```
 
 ---
 class: center, middle,inverse
 background-image: url(./img/mybg.svg)
 <h1><b>Leaflet en R </b></h1>
----
-# 4.R 
-
 
 ---
-# 5.Rstudio
+<h1 style="margin-bottom:-15px">4.R </h1> 
+<div align="center"><img src="https://s2.studylib.es/store/data/008818835_1-c476932320d9a4cd7e891da23012aaa1.png-210x147.png" width="75%"></div>
 
 ---
-# 6.Leaflet en R
+<h1 style="margin-bottom:-15px">5.Rstudio</h1> 
 
-- Instalación 
-
----
-# 7.Componentes generales
-
-
---- 
-# 8.Componentes avanzandos
-
+<center><img src="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/rstudio-ide.png" width="74%"></center>
 
 ---
-# PARTE PRÁCTICA
+<h1 style="margin-bottom:10px">6.Leaflet en R</h1> 
+<center><img src="https://pbs.twimg.com/media/DAcjvPXXsAEz3xT?format=jpg&name=4096x4096" width="77%"></center>
+
+---
+# 7.Componentes: 
+
+* BaseMap (OSM, ESRI, CARTO, etc)
+* Vector (punto, linea o polígonos)
+* Raster
+* Popups
+* Barra de Control (zoom, layer control, buttons,leyenda, atributos)
+* Plugins 
+* ...
+
+---
+class: center, middle,inverse
+background-image: url(./img/mybg.svg)
+<h1><b>Parte práctica</b></h1>
 ---
 # 9.Datos abiertos
----
-# 10.Cheatsheet 
+
+<center><img src="https://user-images.githubusercontent.com/23284899/142291066-f733ced0-6e05-4bc6-bb7b-1199c9f94cad.png" width="100%"></center>
+
 ---
 # 11.Código reproducible
 
+<center><img src="https://user-images.githubusercontent.com/23284899/142291491-46d5aab9-f9d9-45c5-9cc7-04328ac7388e.png" width="100%"></center>
+
 ---
 # 12.Resultado
+
+<center><img src="https://user-images.githubusercontent.com/23284899/142291743-94ad725b-b5d0-4902-bbd2-c33a1ae6f704.png" width="100%"></center>
 
 ---
 background-image: url(./img/mybg.svg)
 class: center, middle,inverse
 # ¡ GRACIAS ^^!
-### Estos slides fueron creados en: [xaringan](https://github.com/yihui/xaringan) con [RMarkdown](https://rmarkdown.rstudio.com/)
+### Estos slides fueron creados en: 
+<center><img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" height="250px"></center>
+con [RMarkdown](https://rmarkdown.rstudio.com/)
