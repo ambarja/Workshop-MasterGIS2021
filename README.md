@@ -32,3 +32,4 @@ En este taller aprenderás los conceptos básicos que involocra a un **GIS devel
 ## 🔴 **Recursos**
 - Lat: -12.0556056
 - Lon: -77.0865366
+- script : [**download**](https://github.com/ambarja/Workshop-MasterGIS2021/raw/main/script/ambarja_MasterGISDay.zip)
