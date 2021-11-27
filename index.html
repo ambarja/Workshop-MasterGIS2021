@@ -4,7 +4,7 @@
     <title>Webmapping en R </title>
     <meta charset="utf-8" />
     <meta name="author" content="Antony Barja  https://ambarja.github.io  https://twitter.com/antony_barja" />
-    <meta name="date" content="2021-11-17" />
+    <meta name="date" content="2021-11-27" />
     <script src="ouput/header-attrs/header-attrs.js"></script>
     <script src="ouput/htmlwidgets/htmlwidgets.js"></script>
     <script src="ouput/jquery/jquery.min.js"></script>
@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ## Cambiando paradigmas en la visualización de datos espaciales
 <hr>
 ### Antony Barja<br/><i class='fab fa-github'></i> <a href="https://ambarja.github.io" class="uri">https://ambarja.github.io</a><br><i class='fab fa-twitter'></i> <a href="https://twitter.com/antony_barja" class="uri">https://twitter.com/antony_barja</a>
-### 2021-11-17
+### 2021-11-27
 
 ---
 
@@ -114,16 +114,20 @@ background-color: #000000
 ---
 # 3.Tecnologías a usar:
 # * CSS
+
+```
+&lt;style&gt;
+  html,body,#mapid{
+   width: 100%;
+   height: 100%;
+   }
+&lt;/style&gt;
+```
+
 ```
 &lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /&gt;
 ```
 
-```
-#mapid{
-    width: 100%;
-    height: 100%;
-   }
-```
 # * JS
 
 ```
@@ -131,7 +135,7 @@ background-color: #000000
 ```
 
 ```
-var map = L.map('map',{center: [35.10418, -106.62987],zoom: 10});
+var map = L.map('map',{center: [PONER_LATITUD,PONER_LONGITUD],zoom: 18});
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 ```
 
@@ -144,8 +148,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 ---
 # Resultado
 
-<div id="htmlwidget-b4c3596a8a89c12a8ba1" style="width:1044px;height:504px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b4c3596a8a89c12a8ba1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[-12.0556056,-77.086536,"<h3>Mi primer mapa web 🤓<\/h3>",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]}],"limits":{"lat":[-12.0556056,-12.0556056],"lng":[-77.086536,-77.086536]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7fff3d52e59c4bf85c94" style="width:1044px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7fff3d52e59c4bf85c94">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addPopups","args":[-12.0556056,-77.086536,"<h3>Mi primer mapa web 🤓<\/h3>",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]}],"limits":{"lat":[-12.0556056,-12.0556056],"lng":[-77.086536,-77.086536]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class: center, middle,inverse
@@ -201,7 +205,6 @@ class: center, middle,inverse
 # ¡ GRACIAS ^^!
 ### Estos slides fueron creados en: 
 &lt;center&gt;&lt;img src="https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png" height="250px"&gt;&lt;/center&gt;
-con [RMarkdown](https://rmarkdown.rstudio.com/)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
