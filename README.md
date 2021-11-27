@@ -29,4 +29,6 @@ En este taller aprenderás los conceptos básicos que involocra a un **GIS devel
  - R y Rstudio <img src="https://camo.githubusercontent.com/e1856e0cec5459bc4af6e4ccfb46142017098bf727fafea057e90c203da0bb7e/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f642f64302f5253747564696f5f6c6f676f5f666c61742e737667" width="45px">
  - Leaflet <img src="https://user-images.githubusercontent.com/23284899/141412537-794c43ee-5e4e-41b8-ac64-30f1edf2097d.png" width="20px">
 
-
+## 🔴 **Recursos**
+- Lat: -12.0556056
+- Lon: -77.0865366
