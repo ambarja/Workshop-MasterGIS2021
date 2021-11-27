@@ -1,10 +1,9 @@
-library(tidyverse)
-library(leaflet)
-library(leaflet.extras)
-library(sf)
-library(echarts4r)
-library(cptcity)
-
+library(tidyverse)       # Pkg para ciencia de datos
+library(leaflet)         # Pkg para crear mapas web
+library(leaflet.extras)  # Plugins para leaflet
+library(sf)              # Pkg para trabajar datos vectoriales
+library(cptcity)         # Paleta de colores <3
+library(htmltools)       # Integrar html mediante codigos de R
 # 1.Lectura de datos ------------------------------------------------------
 vacunas_geo <- read_csv(
   "https://www.datosabiertos.gob.pe/node/8298/download"
